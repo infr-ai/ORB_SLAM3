@@ -173,7 +173,7 @@ void Viewer::Run()
     glEnable (GL_BLEND);
     glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    pangolin::CreatePanel("menu").SetBounds(0.0,1.0,0.0,pangolin::Attach::Pix(175));
+    pangolin::CreatePanel("menu").SetBounds(0.0,1.0,0.0,pangolin::Attach::Pix(260));
     pangolin::Var<bool> menuFollowCamera("menu.Follow Camera",false,true);
     pangolin::Var<bool> menuCamView("menu.Camera View",false,false);
     pangolin::Var<bool> menuTopView("menu.Top View",false,false);
@@ -308,7 +308,7 @@ void Viewer::Run()
 
 
         d_cam.Activate(s_cam);
-        glClearColor(1.0f,1.0f,1.0f,1.0f);
+        glClearColor(0.15f, 0.15f, 0.15f, 1.0f);
         mpMapDrawer->DrawCurrentCamera(Twc);
         if(menuShowKeyFrames || menuShowGraph || menuShowInertialGraph || menuShowOptLba)
             mpMapDrawer->DrawKeyFrames(menuShowKeyFrames,menuShowGraph, menuShowInertialGraph, menuShowOptLba);
